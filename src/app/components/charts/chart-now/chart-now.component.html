@@ -1,0 +1,113 @@
+<div class="container1">
+	<div class="section">
+		<div class="box">
+			<label class="checkbox">
+                <input type="checkbox" checked="checked" (change)="toggleEditable($event)">
+                Ignore unwanted sectors
+              </label>
+              <br/> 
+              <a class="button is-small" (click)="topGainer()">Top 20</a>
+              <a class="button is-small" (click)="allSector()">Sectors</a>
+              <a class="button is-small" (click)="searchSector('Insurance')">Insurance</a>
+              <a class="button is-small" (click)="searchSector('Textile')">Textile</a>
+              <a class="button is-small" (click)="searchSector('Cement')">Cement</a>
+              <a class="button is-small" (click)="searchSector('Food')">Food</a>
+              <a class="button is-small" (click)="searchSector('Financial')">Financial</a>
+              <a class="button is-small" (click)="searchSector('Engineering')">Engineering</a>
+              <a class="button is-small" (click)="searchSector('IT')">IT</a>
+              <a class="button is-small" (click)="searchSector('Fuel')">Fuel & Power</a>
+              <a class="button is-small" (click)="searchSector('Pharma')">Pharma</a>
+              <a class="button is-small" (click)="searchSector('Bank')">Bank</a>
+              <a class="button is-small" (click)="searchSector('Ceramics')">Ceramics</a>
+              <br/><br/>
+              <a class="button is-small" (click)="byHour()">Hourly</a>&nbsp;
+              <a class="button is-small" (click)="byDay()">Daily</a>&nbsp;
+              {{ printDates }}<br/>
+              <a class="button is-small" (click)="scanHigh()">1D high</a>&nbsp;
+              <a class="button is-small is-info" (click)="scanHigher()">2D high</a>&nbsp;
+              <a class="button is-small is-danger" (click)="scanHighest()">3D high</a>
+              <br/><br/>
+              <pre class="card card-block card-header mb-3">Stocks: {{singleStocks | json}}</pre>
+              <input [(ngModel)]="selectedSingleStock"
+                    [typeahead]="singleAllStocks"
+                    (typeaheadOnSelect)="typeaheadOnSelect($event)"
+                    class="form-control">
+              <!-- <input class="input is-small" #txtPercentage value="5" type="text" style="width: 100px" />
+              <a class="button is-small" (click)="searchBullish(txtPercentage.value, 5)">3</a>
+              <a class="button is-small" (click)="searchBullish(txtPercentage.value, 4)">4</a>
+              <a class="button is-small" (click)="searchBullish(txtPercentage.value, 5)">5</a>
+              <a class="button is-small" (click)="searchBullish(txtPercentage.value, 6)">6</a>
+              <a class="button is-small" (click)="searchBullish(txtPercentage.value, 7)">7</a>
+              <a class="button is-small" (click)="searchBullish(txtPercentage.value, 8)">8</a>
+              <a class="button is-small" (click)="searchBullish(txtPercentage.value, 9)">9</a> -->
+            </div>
+            <div class="box">
+              {{result}} script found
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <textarea #txtStocks class="textarea" rows="5"></textarea>
+                        <span *ngFor="let stock of stocks">
+                            {{ stock.Scrip }}
+                        </span>
+                    </div>&nbsp;&nbsp;
+                    <div class="control">
+                        <a class="button is-small is-info" (click)="search(txtStocks.value)">Search</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Stocks -->
+            <div class="row columns is-multiline" >
+              <div class="column is-one-third" *ngFor="let stock of stocks; let i = index">
+                    <div class="card large round">
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="https://www.amarstock.com/Chart/draw?Code={{stock.Scrip}}&&OVER=Fibonnaci(100);OverlayV!;EMA(3);EMA(13);EMA(50);&IND=MACD(12,26,9);AreaRSI(14);CMF(20);DDI(13,30,10,5);&Size=1540*970&cg=1&Cycle={{cycle}}&Start={{startDate}}&End={{endDate}}&Width=1&type=3&bg=white&upColor=Darkgreen&downColor=Red&grid=0&sv=1&dataType=1" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                  <h4><b>{{ stock.Scrip }}</b></h4>
+                                  <b>LTP: {{ stock.LTP }}</b><br />
+                                  <b>Value: {{ stock.Value }} (mn)</b><br />
+                                  <b>Trades: {{ stock.Trade }}</b><br />
+                                  <b>Paidup: {{ stock.PaidUpCap }} (mn)</b><br />
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4 no-padding">{{ stock.MarketCategory }}</p>
+                                    <p><span class="title is-6">{{ stock.ChangePer }} %</span></p><br />
+                                    <p><span class="title is-7">{{ stock.BusinessSegment }}</span></p>
+                                    <!-- <p class="subtitle is-6">Moderator</p> -->
+                                </div>
+                            </div>
+                            <div class="content">
+                        <a class="button is-primary is-small" href="http://lankabd.com/portal/DSE/smartChartFullScreen.html?symbol={{ stock.Scrip }}&siteLanguage=en" target="_blank">View chart</a>
+                        <a class="button is-info is-small" href="https://www.amarstock.com/interactive-chart?symbol={{ stock.Scrip }}" target="_blank">Detail</a>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Stocks -->
+            <!-- Sectors -->
+            <div class="row columns is-multiline" >
+              <div class="column is-one-third" *ngFor="let sector of sectors; let i = index">
+                    <div class="card large round">
+                        <div class="card-image">
+                            <figure class="image">
+                                <img src="https://www.amarstock.com/Chart/draw?Code={{sector}}&&OVER=Fibonnaci(100);OverlayV!;&IND=MACD(12,26,9);CCI(20);&Size=1540*670&cg=1&Cycle=Day1&Start={{startDate}}&End={{endDate}}&Width=1&type=3&bg=White&upColor=Darkgreen&downColor=Red&grid=0&sv=1&dataType=1" alt="Image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                  <h4><b>{{ sector }}</b></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Sectors -->
+        </div>
+    </div>

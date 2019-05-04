@@ -1,0 +1,16 @@
+<div class="box">
+              {{result}} script found
+                <div class="field has-addons">
+                    <div class="control is-expanded">
+                        <textarea #txtone class="textarea" rows="5"></textarea>
+                        <textarea #txttwo class="textarea" rows="5"></textarea>
+                        <span *ngFor="let stock of stocks">
+                            {{ stock.Scrip }}
+                        </span>
+                    </div>
+                    <div class="control">
+                        <a class="button is-info" (click)="common(txtone.value, txttwo.value)">Common</a>
+                        <a class="button is-info" (click)="all(txtone.value, txttwo.value)">All</a>
+                    </div>
+                </div>
+            </div>

@@ -16,3 +16,7 @@ body {
 .control {
     font-size: 9pt;
 }
+
+.card-body{
+  padding:0;
+}

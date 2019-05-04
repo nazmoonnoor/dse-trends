@@ -47,7 +47,7 @@ export class ChartNowComponent implements OnInit {
       .subscribe(
         data => {
           this.daysStocks = data;
-          console.log(this.daysStocks);
+          //console.log(this.daysStocks);
           this.singleAllStocks = this.daysStocks.map(x=>x.Scrip);
           console.log(this.singleAllStocks);
         },

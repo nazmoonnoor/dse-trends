@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container1">
 	<div class="section">
 		<div class="box">
 			<label class="checkbox">
@@ -69,13 +69,14 @@
                         </div>
                             <div>
                                 <div class="float-left">
-                                  <h6>{{ stock.Scrip }}</h6>
+                                  
                                   <b>LTP: {{ stock.LTP }}</b><br />
                                   <b>Value: {{ stock.Value }} (mn)</b><br />
                                   <b>Trades: {{ stock.Trade }}</b><br />
                                   <b>Paidup: {{ stock.PaidUpCap }} (mn)</b><br />
                                 </div>
                                 <div class="float-right">
+                                  <h6>{{ stock.Scrip }}</h6>
                                     <h5>{{ stock.MarketCategory }}</h5>
                                     <h5>{{ stock.ChangePer }} %</h5>
                                     <p><b>{{ stock.BusinessSegment }}</b></p>

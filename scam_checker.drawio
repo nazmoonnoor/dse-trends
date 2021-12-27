@@ -1,1 +1,56 @@
-<mxfile host="app.diagrams.net" modified="2021-12-26T10:03:47.499Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" version="16.1.0" etag="mXCV3fIReSXfVdPOBLD1" type="github"><diagram id="X4u5BVT4PfUbG4uXCIKq">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-12-27T18:02:01.101Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="8HP9WPkWZSFeCrDMAvB_" version="16.1.0" type="github" pages="3">
+  <diagram id="X4u5BVT4PfUbG4uXCIKq" name="db">
+    <mxGraphModel dx="1422" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bghsgIu6lCyNJj_zgTy9-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="150" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="L6j398dAjRgkh-5CyIEw" name="user workflow">
+    <mxGraphModel dx="1422" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="hAfS-8tPmVs-o30nD2Mt-0" />
+        <mxCell id="hAfS-8tPmVs-o30nD2Mt-1" parent="hAfS-8tPmVs-o30nD2Mt-0" />
+        <mxCell id="qWkM4UXs9GdGgEUOP_ev-0" value="Import Postman Collection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="hAfS-8tPmVs-o30nD2Mt-1">
+          <mxGeometry x="210" y="110" width="470" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qWkM4UXs9GdGgEUOP_ev-1" value="Install Docker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="hAfS-8tPmVs-o30nD2Mt-1">
+          <mxGeometry x="80" y="220" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qWkM4UXs9GdGgEUOP_ev-2" value="Run &lt;b&gt;docker-compose up -d --build&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="hAfS-8tPmVs-o30nD2Mt-1">
+          <mxGeometry x="80" y="290" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qWkM4UXs9GdGgEUOP_ev-3" value="Run &lt;b&gt;docker-compose up -d --build&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="hAfS-8tPmVs-o30nD2Mt-1">
+          <mxGeometry x="80" y="360" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="qWkM4UXs9GdGgEUOP_ev-4" value="Post Domain and check status" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="hAfS-8tPmVs-o30nD2Mt-1">
+          <mxGeometry x="210" y="500" width="470" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qWkM4UXs9GdGgEUOP_ev-5" value="Check Domain histories" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;" vertex="1" parent="hAfS-8tPmVs-o30nD2Mt-1">
+          <mxGeometry x="210" y="540" width="470" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="l5eLRgrNyxjy5g67VI9p" name="project structure">
+    <mxGraphModel dx="1422" dy="729" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="lD3oNVFMLMd7FP-D1D3J-0" />
+        <mxCell id="lD3oNVFMLMd7FP-D1D3J-1" parent="lD3oNVFMLMd7FP-D1D3J-0" />
+        <mxCell id="lD3oNVFMLMd7FP-D1D3J-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="lD3oNVFMLMd7FP-D1D3J-1">
+          <mxGeometry x="50" y="280" width="200" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="lD3oNVFMLMd7FP-D1D3J-4" value="" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="lD3oNVFMLMd7FP-D1D3J-1">
+          <mxGeometry x="120" y="410" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="lD3oNVFMLMd7FP-D1D3J-5" value="postgres db" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="lD3oNVFMLMd7FP-D1D3J-1">
+          <mxGeometry x="120" y="475" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
